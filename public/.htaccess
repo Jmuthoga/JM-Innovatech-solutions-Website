@@ -9,6 +9,11 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+    # ✅ Allow manifest.json and service-worker.js to bypass Laravel
+    RewriteCond %{REQUEST_URI} ^/manifest.json$ [OR]
+    RewriteCond %{REQUEST_URI} ^/service-worker.js$
+    RewriteRule ^ - [L]
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
@@ -19,3 +24,6 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+# ✅ Ensure JSON is served correctly
+AddType application/json .json

@@ -1,25 +1,25 @@
 <?php
-
+    
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RoleController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\SalesController;
-use App\Http\Controllers\BackupController;
-use App\Http\Controllers\ReportController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\SettingController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\PurchaseController;
-use App\Http\Controllers\SupplierController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\PermissionController;
-use App\Http\Controllers\Auth\LogoutController;
-use App\Http\Controllers\NotificationController;
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Auth\ForgotPasswordController;
-use App\Http\Controllers\BatchController;
-
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\MultiimageController;
+use App\Models\Multipic;
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ChangePassController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SocialController;
+use App\Http\Controllers\PostCategoryController;
+use App\Http\Controllers\PostTagController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\VideoController;
+use App\Http\Controllers\AdvertController;
+use App\Http\Controllers\FrontendBlogController;
+use App\Http\Controllers\CareerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,93 +30,227 @@ use App\Http\Controllers\BatchController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/email/verify', function () {
+//     return view('auth.verify-email');
+// })->middleware(['auth'])->name('verification.notice');
+    
+Route::get('/webdevelopment', function () {
+    return view('pages.webdevelopment');
+})->name('webdevelopment');
+
+Route::get('/mobiledevelopment', function () {
+return view('pages.mobiledevelopment');
+})->name('mobiledevelopment');
+    
+Route::get('/design', function () {
+return view('pages.design');
+})->name('design');
+
+Route::get('/bulksms', function () {
+return view('pages.bulksms');
+})->name('bulksms');
+    
+Route::get('/consult', function () {
+return view('pages.consult');
+})->name('consult');
+    
+Route::get('/commerce', function () {
+return view('pages.commerce');
+})->name('commerce');
+    
+Route::get('/maintenance', function () {
+return view('pages.maintenance');
+})->name('maintenance');
+    
+Route::get('/train', function () {
+return view('pages.train');
+})->name('train');
+
+Route::get('/termsofservice', function () {
+return view('pages.termsofservice');
+})->name('termsofservice');
+
+Route::get('/whoarewe', function () {
+    return view('pages.whoarewe');
+})->name('whoarewe');
+
+Route::get('/faq', function () {
+    return view('pages.faq');
+})->name('faq');
+
+Route::get('/careers', [CareerController::class,'index'])->name('careers.index');
+Route::get('/careers/{slug}', [CareerController::class,'show'])->name('careers.show');
 
 
-Route::group(['middleware' => ['guest']], function () {
-    Route::get('login', [LoginController::class, 'index'])->name('login');
-    Route::post('login', [LoginController::class, 'login']);
-    Route::get('register', [RegisterController::class, 'index'])->name('register');
-    Route::post('register', [RegisterController::class, 'store']);
+// Frontend blog routes
+Route::get('/blogs', [FrontendBlogController::class, 'index'])->name('blog.index');
+Route::get('/blogs/{post:slug}', [FrontendBlogController::class, 'show'])->name('blog.show');
 
-
-
-    Route::get('forgot-password', [ForgotPasswordController::class, 'index'])->name('forgot-password');
-    Route::post('forgot-password', [ForgotPasswordController::class, 'reset']);
-});
-
-Route::group(['middleware' => ['auth']], function () {
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('logout', [LogoutController::class, 'index'])->name('logout');
-
-    Route::get('categories', [CategoryController::class, 'index'])->name('categories');
-    Route::post('categories', [CategoryController::class, 'store']);
-    Route::put('categories', [CategoryController::class, 'update']);
-    Route::delete('categories', [CategoryController::class, 'destroy']);
-
-    Route::get('products', [ProductController::class, 'index'])->name('products');
-    Route::get('products/create', [ProductController::class, 'create'])->name('add-product');
-    Route::get('expired-products', [ProductController::class, 'expired'])->name('expired');
-    Route::get('products/{product}', [ProductController::class, 'show'])->name('edit-product');
-    Route::get('outstock-products', [ProductController::class, 'outstock'])->name('outstock');
-    Route::post('products/create', [ProductController::class, 'store']);
-    Route::post('products/{product}', [ProductController::class, 'update']);
-    Route::delete('products', [ProductController::class, 'destroy']);
-
-    Route::get('suppliers', [SupplierController::class, 'index'])->name('suppliers');
-    Route::get('add-supplier', [SupplierController::class, 'create'])->name('add-supplier');
-    Route::post('add-supplier', [SupplierController::class, 'store']);
-    Route::get('suppliers/{supplier}', [SupplierController::class, 'show'])->name('edit-supplier');
-    Route::delete('suppliers', [SupplierController::class, 'destroy']);
-    Route::put('suppliers/{supplier}}', [SupplierController::class, 'update'])->name('edit-supplier');
-
-    Route::get('purchases', [PurchaseController::class, 'index'])->name('purchases');
-    Route::get('add-purchase', [PurchaseController::class, 'create'])->name('add-purchase');
-    Route::post('add-purchase', [PurchaseController::class, 'store']);
-    Route::get('purchases/{purchase}', [PurchaseController::class, 'show'])->name('edit-purchase');
-    Route::put('purchases/{purchase}', [PurchaseController::class, 'update']);
-    Route::delete('purchases', [PurchaseController::class, 'destroy']);
-
-    Route::get('sales', [SalesController::class, 'index'])->name('sales');
-    Route::post('sales', [SalesController::class, 'store']);
-    Route::put('sales', [SalesController::class, 'update']);
-    Route::delete('sales', [SalesController::class, 'destroy']);
-    Route::get('orders', [SalesController::class, 'orders'])->name('orders');
-    Route::post('orders', [SalesController::class, 'store_orders'])->name('sales.store');
-
-
-    Route::get('permissions', [PermissionController::class, 'index'])->name('permissions');
-    Route::post('permissions', [PermissionController::class, 'store']);
-    Route::put('permissions', [PermissionController::class, 'update']);
-    Route::delete('permissions', [PermissionController::class, 'destroy']);
-
-    Route::get('roles', [RoleController::class, 'index'])->name('roles');
-    Route::post('roles', [RoleController::class, 'store']);
-    Route::put('roles', [RoleController::class, 'update']);
-    Route::delete('roles', [RoleController::class, 'destroy']);
-
-    Route::get('users', [UserController::class, 'index'])->name('users');
-    Route::post('users', [UserController::class, 'store']);
-    Route::put('users', [UserController::class, 'update']);
-    Route::delete('users', [UserController::class, 'destroy']);
-
-    Route::get('profile', [UserController::class, 'profile'])->name('profile');
-    Route::post('profile', [UserController::class, 'updateProfile']);
-    Route::put('profile', [UserController::class, 'updatePassword'])->name('update-password');
-
-    Route::get('settings', [SettingController::class, 'index'])->name('settings');
-
-    Route::get('notification', [NotificationController::class, 'markAsRead'])->name('mark-as-read');
-    Route::get('notification-read', [NotificationController::class, 'read'])->name('read');
-
-    Route::get('reports', [ReportController::class, 'index'])->name('reports');
-    Route::post('reports', [ReportController::class, 'getData']);
-
-    Route::get('backup', [BackupController::class, 'index'])->name('backup-app');
-    Route::get('backup-app', [BackupController::class, 'database'])->name('backup-db');
-
-    Route::get('batch', [BatchController::class, 'batch']);
-});
-
+// Post Comment
+Route::post('post/{slug}/comment', [PostCommentController::class, 'store'])->name('post-comment.store');
+Route::resource('/comment', 'PostCommentController');
 Route::get('/', function () {
-    return redirect()->route('dashboard');
-});
+$brands = DB::table('brands')->get();
+$abouts = DB::table('home_abouts')->first();
+$images = Multipic::all();
+$service = DB::table('services')->first();
+    
+return view('home', compact('brands', 'abouts', 'images', 'service'));
+})->name('main.home');
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('admin.index');
+// })->name('dashboard');
+
+Route::middleware(['auth:sanctum'])->get('/dashboard', function () {
+return view('admin.index');
+})->name('dashboard');
+
+        Route::get('user/logout', [AdminController::class, 'logout'])->name('user.logout');
+        
+        //brand
+        Route::get('/brand/all', [BrandController::class, 'index'])->name('all.brand');
+        
+        Route::post('/brand/store', [BrandController::class, 'store'])->name('store.brand');
+        
+        Route::get('/brand/edit/{id}', [BrandController::class, 'edit'])->name('brand.edit');
+        
+        Route::post('/brand/update/{id}', [BrandController::class, 'update'])->name('brand.update');
+        
+        Route::get('/brand/delete/{id}', [BrandController::class, 'delete'])->name('brand.delete');
+        
+        
+        // admin routes
+        Route::get('home/slider', [HomeController::class, 'homeslider'])->name('home.slider');
+        
+        Route::get('add/slider', [HomeController::class, 'addslider'])->name('add.slider');
+        
+        Route::Post('store/slider', [HomeController::class, 'storeslider'])->name('store.slider');
+        
+        Route::get('slider/delete/{id}', [HomeController::class, 'deleteslider'])->name('slider.delete');
+        
+        Route::get('slider/edit/{id}', [HomeController::class, 'editlider'])->name('slider.edit');
+        
+        Route::post('slider/update/{id}', [HomeController::class, 'updateslider'])->name('slider.update');
+        
+        
+        
+        
+        //about
+        Route::get('/home/about', [AboutController::class, 'index'])->name('home.about');
+        
+        Route::get('/about/create', [AboutController::class, 'addabout'])->name('add.about');
+        
+        Route::Post('about/store', [AboutController::class, 'storeslider'])->name('store.about');
+        
+        Route::get('/about/edit/{id}', [AboutController::class, 'editabout'])->name('about.edit');
+        
+        Route::post('/about/update/{id}', [AboutController::class, 'updateabout'])->name('about.update');
+        
+        Route::get('/about/delete/{id}', [AboutController::class, 'deleteabout'])->name('about.delete');
+        
+        
+        // PORTFOLIO
+        
+        Route::get('/multi/all', [MultiimageController::class, 'index'])->name('multi.image');
+        
+        Route::post('/multi/add', [MultiimageController::class, 'multiimage'])->name('store.images');
+        
+        Route::get('/multi/delete/{id}', [MultiimageController::class, 'multidelete'])->name('multy.delete');
+        
+        
+        
+        //Portfolio
+        // Portfolio main page
+        Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+        
+        // Portfolio filtered by category
+        Route::get('/portfolio/category/{category}', [PortfolioController::class, 'index'])->name('portfolio.category');
+        
+        Route::get('/portfolio/edit/{id}', [PortfolioController::class, 'edit'])->name('multy.edit');
+        Route::post('/portfolio/update/{id}', [PortfolioController::class, 'update'])->name('multy.update');
+        
+        
+        //contact admin
+        Route::get('/admin/contact', [ContactController::class, 'admincontact'])->name('contact.admin');
+        
+        Route::get('/admin/contact/add', [ContactController::class, 'adminaddcontact'])->name('add.contact');
+        
+        Route::post('/admin/contact/add', [ContactController::class, 'adminstorecontact'])->name('store.contact');
+        
+        
+        //home contact
+        Route::get('/contact', [ContactController::class, 'homeindex'])->name('contact');
+        
+        Route::get('/contact/delete/{id}', [ContactController::class, 'deletecontact'])->name('contact.delete');
+        
+        Route::get('/contact/edit/{id}', [ContactController::class, 'editcontact'])->name('contact.edit');
+        
+        Route::post('/contact/update/{id}', [ContactController::class, 'updatecontact'])->name('contact.update');
+        
+        Route::get('/contact/message', [ContactController::class, 'contactmessage'])->name('contact.message');
+        
+        Route::get('/contact/dmessage{id}', [ContactController::class, 'cmessagedelete'])->name('message.delete');
+        
+        Route::get('/contact/vmessage{id}', [ContactController::class, 'viewmessage'])->name('message.view');
+        
+        //home coantcat send
+        
+        Route::post('/contact/form', [ContactController::class, 'formcontact'])->name('contact.form');
+        
+        
+        // chnage password for user
+        
+        Route::get('/user/password', [ChangePassController::class, 'changepassword'])->name('chnage.password');
+        
+        Route::post('/password/update', [ChangePassController::class, 'updatepassword'])->name('password.update');
+        
+        // user profile
+        Route::get('/user/profile', [ChangePassController::class, 'profileupdate'])->name('chnage.profile');
+        
+        Route::post('/user/profile/update', [ChangePassController::class, 'saveprofile'])->name('update.user.profile');
+        
+        
+        
+        //services
+        
+        Route::get('/admin/services', [ServiceController::class, 'index'])->name('service.view');
+        
+        Route::post('/admin/services/store', [ServiceController::class, 'store'])->name('service.store');
+        
+        Route::post('/admin/services/update/{id}', [ServiceController::class, 'update'])->name('services.update');
+        
+        // POST category
+        Route::resource('/post_category', PostCategoryController::class);
+        
+        // Post tag
+        Route::resource('/post_tag', PostTagController::class);
+        
+        // Post
+        Route::resource('/post', PostController::class);
+        
+        // Message
+        Route::resource('/post_comments', MessageController::class);
+        Route::get('/message/five', [MessageController::class, 'messageFive'])->name('messages.five');
+        
+         Route::resource('/adverts', AdvertController::class);
+        Route::resource('/videos', VideoController::class);
+        
+        // Careers CRUD (Admin)
+        Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum'])->group(function () {
+            Route::get('/careers', [CareerController::class, 'adminIndex'])->name('careers.index');
+            Route::get('/careers/create', [CareerController::class, 'create'])->name('careers.create');
+            Route::post('/careers', [CareerController::class, 'store'])->name('careers.store');
+            Route::get('/careers/{career}/edit', [CareerController::class, 'edit'])->name('careers.edit');
+            Route::put('/careers/{career}', [CareerController::class, 'update'])->name('careers.update');
+            Route::delete('/careers/{career}', [CareerController::class, 'destroy'])->name('careers.destroy');
+        });
+
+        //social links
+        
+        Route::get('/admin/social', [SocialController::class, 'index'])->name('social.view');
+        
+        
+        Route::post('/admin/social/create', [SocialController::class, 'store'])->name('social.create');
+        
+        Route::post('/admin/social/update/{id}', [SocialController::class, 'undate'])->name('social.update');

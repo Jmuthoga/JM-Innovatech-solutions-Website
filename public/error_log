@@ -1,0 +1,5 @@
+[08-Aug-2025 11:11:41 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\PortfolioController as PortfolioController because the name is already in use in /home/pvxkzubm/public_html/routes/web.php on line 145
+[19-Aug-2025 13:20:37 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\PostController::create() in /home/pvxkzubm/public_html/app/Http/Controllers/PostController.php on line 23
+[19-Aug-2025 13:28:06 UTC] PHP Fatal error:  Cannot redeclare App\Models\Post::tags() in /home/pvxkzubm/public_html/app/Models/Post.php on line 40
+[25-Aug-2025 11:04:26 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Carbon as Carbon because the name is already in use in /home/pvxkzubm/public_html/app/Http/Controllers/ContactController.php on line 10
+[25-Aug-2025 11:04:26 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Carbon as Carbon because the name is already in use in /home/pvxkzubm/public_html/app/Http/Controllers/ContactController.php on line 10
