@@ -26,10 +26,6 @@ This repository contains the official company website, built with **Laravel**, s
 </p>
 
 <p align="center">
-  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech1.png" width="600" alt="Portfolio Screenshot">
-</p>
-
-<p align="center">
   <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech2.png" width="600" alt="Careers Page Screenshot">
 </p>
 
@@ -41,9 +37,6 @@ This repository contains the official company website, built with **Laravel**, s
   <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech4.png" width="600" alt="Mobile View Screenshot">
 </p>
 
-<p align="center">
-  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech5.png" width="600" alt="Additional Feature Screenshot">
-</p>
 
 ## Live Website
 
@@ -63,6 +56,7 @@ Contributions are welcome! Please fork the repository and submit pull requests.
 ## License
 
 This project is licensed under the MIT License.
+
 
 
 
