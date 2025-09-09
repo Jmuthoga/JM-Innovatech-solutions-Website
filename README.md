@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://www.jminnovatechsolution.co.ke" target="_blank">
-    <img src="https://www.jminnovatechsolution.co.ke/assets/img/logo.png" width="300" alt="JM Innovatech Logo">
+    <img src="https://www.jminnovatechsolution.co.ke/assets/img/logo2.png" width="300" alt="JM Innovatech Logo">
   </a>
 </p>
 
@@ -37,3 +37,4 @@ Contributions are welcome. Please fork the repository and submit pull requests.
 ## License
 
 This project is licensed under the MIT License.
+
