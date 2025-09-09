@@ -8,7 +8,7 @@
 
 ## About
 
-JM Innovatech Solutions is a Kenyan-based technology company that provides innovative software and IT solutions for businesses and organizations.  
+JM Innovatech Solutions is a Kenyan-based technology company providing innovative software and IT solutions for businesses and organizations.  
 This repository contains the official company website, built with **Laravel**, showcasing services, portfolio, career opportunities, and contact information.
 
 ## Features
@@ -18,6 +18,32 @@ This repository contains the official company website, built with **Laravel**, s
 - Real-time updates for career postings and applications.
 - Optimized for **performance and SEO**.
 - Built with **Laravel**, **Bootstrap 5**, and custom JavaScript.
+
+## Screenshots
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech.png" width="600" alt="Homepage Screenshot">
+</p>
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech1.png" width="600" alt="Portfolio Screenshot">
+</p>
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech2.png" width="600" alt="Careers Page Screenshot">
+</p>
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech3.png" width="600" alt="Admin Dashboard Screenshot">
+</p>
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech4.png" width="600" alt="Mobile View Screenshot">
+</p>
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech5.png" width="600" alt="Additional Feature Screenshot">
+</p>
 
 ## Live Website
 
@@ -32,10 +58,11 @@ This repository contains the official company website, built with **Laravel**, s
 
 ## Contributing
 
-Contributions are welcome. Please fork the repository and submit pull requests.  
+Contributions are welcome! Please fork the repository and submit pull requests.
 
 ## License
 
 This project is licensed under the MIT License.
+
 
 
