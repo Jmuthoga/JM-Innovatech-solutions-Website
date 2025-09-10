@@ -1,53 +1,30 @@
-# JM Innovatech Solutions Website
-
-<p align="center">
-  <a href="https://www.jminnovatechsolution.co.ke" target="_blank">
-    <img src="https://www.jminnovatechsolution.co.ke/assets/img/iconbg-512.png" width="300" alt="JM Innovatech Logo">
-  </a>
-</p>
+# Pharmacy Management System
 
 ## About
 
-JM Innovatech Solutions is a Kenyan-based technology company providing innovative software and IT solutions for businesses and organizations.  
-This repository contains the official company website, built with **Laravel**, showcasing services, portfolio, career opportunities, and contact information.
+This is a modern **Pharmacy Management System** built with **Laravel**, designed to help pharmacies manage drugs, inventory, orders, sales, and customers efficiently.  
+It provides an admin panel for managing products, tracking sales, and generating reports.
 
 ## Features
 
-- Responsive **frontend website** with company info, portfolio, and careers section.
-- **Admin panel** for managing content, projects, and careers.
-- Real-time updates for career postings and applications.
-- Optimized for **performance and SEO**.
+- Manage **drugs and inventory** with ease.
+- Create and track **orders and sales**.
+- Manage **customers** and their purchase history.
+- Generate **sales and profit reports**.
+- Secure authentication and role-based access.
+- Optimized for **performance and reliability**.
 - Built with **Laravel**, **Bootstrap 5**, and custom JavaScript.
 
-## Screenshots
+## Live Demo
 
-<p align="center">
-  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech.png" width="600" alt="Homepage Screenshot">
-</p>
-
-<p align="center">
-  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech2.png" width="600" alt="Careers Page Screenshot">
-</p>
-
-<p align="center">
-  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech3.png" width="600" alt="Admin Dashboard Screenshot">
-</p>
-
-<p align="center">
-  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech4.png" width="600" alt="Mobile View Screenshot">
-</p>
-
-
-## Live Website
-
-[https://www.jminnovatechsolution.co.ke](https://www.jminnovatechsolution.co.ke)
+*(Add your live demo link here if available)*
 
 ## Technology Stack
 
 - **Backend:** Laravel (PHP Framework)
-- **Frontend:** Bootstrap 5, TailwindCSS, Animate.css
+- **Frontend:** Bootstrap 5, Vanilla JavaScript
 - **Database:** MySQL
-- **Other:** Vanilla JS for interactivity
+- **Other:** AJAX for real-time updates
 
 ## Contributing
 
@@ -56,6 +33,7 @@ Contributions are welcome! Please fork the repository and submit pull requests.
 ## License
 
 This project is licensed under the MIT License.
+
 
 
 
