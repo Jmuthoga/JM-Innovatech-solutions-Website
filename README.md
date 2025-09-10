@@ -28,6 +28,24 @@ This repository contains the official company website, built with **Laravel**, s
 - **Contact:** Company contact information and inquiry forms.  
 - **More:** Additional features like testimonials, FAQs, or announcements.
 
+## Screenshots
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech.png" width="600" alt="Homepage Screenshot">
+</p>
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech2.png" width="600" alt="Careers Page Screenshot">
+</p>
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech3.png" width="600" alt="Admin Dashboard Screenshot">
+</p>
+
+<p align="center">
+  <img src="https://www.jminnovatechsolution.co.ke/assets/img/screenshots/jminnovatech4.png" width="600" alt="Mobile View Screenshot">
+</p>
+
 ## Live Website
 
 [https://www.jminnovatechsolution.co.ke](https://www.jminnovatechsolution.co.ke)
@@ -47,8 +65,6 @@ We welcome contributions! Please fork the repository and submit pull requests.
 
 This project is licensed under the MIT License.
 
-
-This project is licensed under the MIT License.
 
 
 
