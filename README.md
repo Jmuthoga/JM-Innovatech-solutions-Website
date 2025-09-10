@@ -1,38 +1,55 @@
-# Pharmacy Management System
+# JM Innovatech Solutions Website
+
+<p align="center">
+  <a href="https://www.jminnovatechsolution.co.ke" target="_blank">
+    <img src="https://www.jminnovatechsolution.co.ke/assets/img/iconbg-512.png" width="300" alt="JM Innovatech Logo">
+  </a>
+</p>
 
 ## About
 
-This is a modern **Pharmacy Management System** built with **Laravel**, designed to help pharmacies manage drugs, inventory, orders, sales, and customers efficiently.  
-It provides an admin panel for managing products, tracking sales, and generating reports.
+JM Innovatech Solutions is a Kenyan-based technology company delivering innovative software and IT solutions for businesses and organizations.  
+This repository contains the official company website, built with **Laravel**, showcasing our services, portfolio, career opportunities, blog, and contact information.
 
 ## Features
 
-- Manage **drugs and inventory** with ease.
-- Create and track **orders and sales**.
-- Manage **customers** and their purchase history.
-- Generate **sales and profit reports**.
-- Secure authentication and role-based access.
-- Optimized for **performance and reliability**.
-- Built with **Laravel**, **Bootstrap 5**, and custom JavaScript.
+- Responsive **frontend website** with company information, portfolio, career section, blog, and more.  
+- **Admin panel** for managing content, projects, career postings, and blog articles.  
+- Real-time updates for career listings and applications.  
+- Optimized for **performance, responsiveness, and SEO**.  
+- Built with **Laravel**, **Bootstrap 5**, TailwindCSS, Animate.css, and **Vanilla JavaScript** for interactivity.
 
-## Live Demo
+## Sections
 
-[Access the system](http://sehhamedical.jminnovatechsolution.co.ke/login)
+- **Services:** Overview of software, IT, and consulting solutions provided by JM Innovatech Solutions.  
+- **Portfolio:** Showcase of completed projects and client work.  
+- **Careers:** Listings of job openings with submission and application management.  
+- **Blog:** Articles, updates, and insights on technology trends and solutions.  
+- **Contact:** Company contact information and inquiry forms.  
+- **More:** Additional features like testimonials, FAQs, or announcements.
+
+## Live Website
+
+[https://www.jminnovatechsolution.co.ke](https://www.jminnovatechsolution.co.ke)
 
 ## Technology Stack
 
-- **Backend:** Laravel (PHP Framework)
-- **Frontend:** Bootstrap 5, Vanilla JavaScript
-- **Database:** MySQL
-- **Other:** AJAX for real-time updates
+- **Backend:** Laravel (PHP Framework)  
+- **Frontend:** Bootstrap 5, TailwindCSS, Animate.css  
+- **Database:** MySQL  
+- **Other:** Vanilla JavaScript for interactivity
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit pull requests.
+We welcome contributions! Please fork the repository and submit pull requests.
 
 ## License
 
 This project is licensed under the MIT License.
+
+
+This project is licensed under the MIT License.
+
 
 
 
