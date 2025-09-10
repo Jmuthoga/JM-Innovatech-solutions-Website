@@ -17,7 +17,7 @@ It provides an admin panel for managing products, tracking sales, and generating
 
 ## Live Demo
 
-*(Add your live demo link here if available)*
+[Access the system](http://sehhamedical.jminnovatechsolution.co.ke/login)
 
 ## Technology Stack
 
@@ -33,6 +33,7 @@ Contributions are welcome! Please fork the repository and submit pull requests.
 ## License
 
 This project is licensed under the MIT License.
+
 
 
 
